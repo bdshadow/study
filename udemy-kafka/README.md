@@ -49,11 +49,13 @@ Topics are split in **partitions**
 - each consumer within a group reads from exclusive partitions
 - if you have more consumers than partitions, some consumers will be inactive
 
+![Kafka Consumer Groups vs Partitions](images/consumerGroupsPartitions.png)
+
 **Consumer Offsets**
 - Kafka stores the offsets at which a consumer group has been reading
 - the offsets committed line in a Kafka topic, named __consumer_offsets
 - when a consumer in a group has processed data received from Kafka, it should be committing the offsets
-- if a consumer dies, it will be able to red back from where it left off thanks to the committed consumer offsets.
+- if a consumer dies, it will be able to reed back from where it left off thanks to the committed consumer offsets.
 - consumers choose when to commit offsets
     * at most once:
         * offsets are committed as soon as the message is received
@@ -66,4 +68,5 @@ Topics are split in **partitions**
         * can be achieved for Kafka => Kafka workflows using Kafka Streams API
         * for Kafka => External System workflows, use an idempotent consumer (processing repeated messages won't impact your system)
         
-![Kafka CLuster Overview](images/kafkaClusterOverview.png)
+![Kafka Cluster Overview](images/kafkaClusterOverview.png)
+
