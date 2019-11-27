@@ -27,6 +27,8 @@ Topics are split in **partitions**
 - after connecting to any broker, you're connected to the entire cluster
 - safety is provided via replicating partitions among brokers
 
+![Kafka Broker Discovery](images/kafkaBrokerDiscovery.png)
+
 **Leader for a partition**
 - at any time only one broker can be a leader for a given partition
 - only that leader can receive and serve data for a partition
@@ -69,4 +71,13 @@ Topics are split in **partitions**
         * for Kafka => External System workflows, use an idempotent consumer (processing repeated messages won't impact your system)
         
 ![Kafka Cluster Overview](images/kafkaClusterOverview.png)
+
+**Zookeeper**
+- manages brokers (keeps a list of them)
+- helps in performing leader election for partitions
+- sends notifications to Kafka in case of changes (new topic, broker dies, broker comes up, delete topics, etc...)
+- Kafka can't work without Zookeeper!
+- operates by design with an odd number of servers (3,5,7)
+- has a leader (handle writes) the rest of the servers are followers (handle reads)
+- doesn't store consumer offsets
 
