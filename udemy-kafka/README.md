@@ -4,7 +4,9 @@ Course URL: https://www.udemy.com/course/apache-kafka/
 
 Resources: https://courses.datacumulus.com/kafka-beginners-bu5 (Github: https://github.com/simplesteph/kafka-beginners-course)
 
-## Theory
+- [CLI](docs/cli.md)
+
+# General overview of the theory
 
 **Topics**: a particular stream of data
 - similar to a table in a database
