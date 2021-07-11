@@ -16,8 +16,11 @@ public class RelativePaths {
         System.out.println(p4.getName(1));
         System.out.println(p4.getName(2));
 
-        Path p5 = Paths.get("c:\\temp\\test.txt");
+        Path p5 = Paths.get("/temp/test.txt");
         Path p6 = Paths.get("report.pdf");
+        Path p7 = Paths.get("/temp/pdf.txt");
+
         System.out.println(p5.resolve(p6));
+        System.out.println(p5.resolve(p7));
     }
 }
