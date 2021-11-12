@@ -12,6 +12,7 @@
     <modules>
         <module>udemy-kafka</module>
         <module>java11</module>
+        <module>spring</module>
     </modules>
 
 </project>
